@@ -19,6 +19,9 @@ public class TestGreetingServiceUpdated {
 		
 		GreetingService gs = input -> System.out.println("Welcome " + input);
 		gs.greet("Rahul");
+		
+		GreetingService greetings = System.out::println;	// Won't allow to print "Good morning Laxman"
+		greetings.greet("Laxman");
 	}
 
 }
