@@ -3,7 +3,7 @@ package com.pearson.deitel.cards;
 import java.security.SecureRandom;
 
 public class DeckOfCards {
-	private static final int NUMBER_UF_CARDS = 52;							// total # of cards
+	private static final int NUMBER_OF_CARDS = 52;							// total # of cards
 	private static final SecureRandom randomNumbers = new SecureRandom();	// Random number generator
 	
 	private Card[] deck;		// array of card objects
@@ -17,7 +17,7 @@ public class DeckOfCards {
 				"Nine", "Ten", "Jack", "Queen", "King" };
 		String[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
 		
-		deck = new Card[NUMBER_UF_CARDS];	// create the array of card objects
+		deck = new Card[NUMBER_OF_CARDS];	// create the array of card objects
 		currentCard = 0;					// first card to be dealt is deck[0]
 		
 		// populate deck with card objects
@@ -34,7 +34,7 @@ public class DeckOfCards {
 		// for each card, pick another random card (0-51) and swap them
 		for (int first = 0; first < deck.length; first++) {
 			// select a random number between 0 and 51
-			int second = randomNumbers.nextInt(NUMBER_UF_CARDS);
+			int second = randomNumbers.nextInt(NUMBER_OF_CARDS);
 			
 			// swap current card with randomly selected card
 			Card temp = deck[first];
